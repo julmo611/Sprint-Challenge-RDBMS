@@ -33,9 +33,16 @@ This will be akin to the Web API that you built in the last sprint, only this ti
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. Explain the difference between `RDBMS` and `SQL`.
+  ***An RDBMS is a Relational Database Management System. It is the database software itself, which manages storage, querying, updating, and, well, everything. and SQL, the Structured Query Language, is a language (or a family of closely related languages or dialects) which is typically used to query the RDBMS. 
+
 1. Why do tables need a `primary key`?
+  *** It is a best practice in normalized database design to have a primary key on each table along with corresponding foreign key relationships.  You might have exceptions, such as a staging table or similar that is not really part of the normalized design.
+
 1. What is the name given to a table column that references the primary key on another table.
+  *** Foreign key
+
 1. What do we need in order to have a _many to many_ relationship between two tables.
+  *** Two elements that relate to each other through several factors.. A junction table
 
 ## Project Set Up
 
@@ -58,27 +65,27 @@ Follow these steps for completing your project.
 
 **NOTE** There is no boilerplate for you for this project. You will need to take the steps necessary for creating this project from scratch. Start by initializing your project with a `package.json` file and go from there.
 
-- [ ] A `project` can contain multiple actions and has:
-  - [ ] a unique Id.
-  - [ ] a name.
-  - [ ] a description.
-  - [ ] a flag that indicates if the project is complete or not.
-- [ ] An `action` belongs to only one project. An action has:
-  - [ ] a unique id.
-  - [ ] a description of what needs to be done.
-  - [ ] a notes column to add additional information.
-  - [ ] a flag that indicates if the action has been completed.
+- [x] A `project` can contain multiple actions and has:
+  - [x] a unique Id.
+  - [x] a name.
+  - [x] a description.
+  - [x] a flag that indicates if the project is complete or not.
+- [x] An `action` belongs to only one project. An action has:
+  - [x] a unique id.
+  - [x] a description of what needs to be done.
+  - [x] a notes column to add additional information.
+  - [x] a flag that indicates if the action has been completed.
 
 Feel free to name the tables and fields anything you want. **Add relationships** as you see fit.
 
 ### Tasks
 
-- [ ] Build the database and tables using knex migrations. **Seeding is not needed**.
-- [ ] Build the API with the following endpoints:
+- [x] Build the database and tables using knex migrations. **Seeding is not needed**.
+- [x] Build the API with the following endpoints:
 
-  - [ ] POST for adding projects.
-  - [ ] POST for adding actions.
-  - [ ] GET for retrieving a `project` by its `id` that returns an object with the following structure:
+  - [x] POST for adding projects.
+  - [x] POST for adding actions.
+  - [x] GET for retrieving a `project` by its `id` that returns an object with the following structure:
 
     ```js
     {
